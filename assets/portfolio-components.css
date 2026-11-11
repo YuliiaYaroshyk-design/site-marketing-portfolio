@@ -1,0 +1,225 @@
+.site-button,
+.copy .site-button,
+.hero .button,
+button {
+  border-radius: 999px;
+}
+
+footer b {
+  font: 400 25px/1.15 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: .015em;
+  text-transform: none;
+}
+
+footer a {
+  font: 400 14px/1.3 'DM Sans', system-ui, sans-serif;
+}
+
+#more .project-media.post-stack {
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 300px);
+  place-content: center;
+  aspect-ratio: auto;
+  padding: 0;
+  background: transparent;
+}
+
+#more .post-stack .post-card {
+  position: relative;
+  grid-area: 1 / 1;
+  align-self: center;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fffdf7;
+  box-shadow: 0 4px 16px #23271928;
+}
+
+#more .post-stack img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#more .post-stack .post-card > img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+#more .project-vulyk .post-card > img {
+  object-position: center 30%;
+}
+
+#more .project-ordering .post-card > img {
+  object-position: 94% center;
+}
+
+.post-top,
+.post-bottom {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  color: #343b31;
+  line-height: 1;
+}
+
+.post-top {
+  min-height: 34px;
+  font-size: clamp(10px, 1.2vw, 13px);
+  font-weight: 600;
+}
+
+#more .post-stack .post-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e7ebdd;
+  font: 600 12px/1 Georgia, serif;
+}
+
+#more .post-stack .post-avatar img {
+  width: 16px;
+}
+
+.post-bottom {
+  min-height: 34px;
+  gap: 5px;
+  color: #121619;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-bottom svg {
+  flex: 0 0 auto;
+  width: 14px;
+  height: auto;
+}
+
+.post-bottom > svg:last-child {
+  margin-inline-start: auto;
+}
+
+.post-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+#s5 .concept {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  align-items: start;
+  gap: clamp(18px, 3vw, 30px);
+}
+
+#s5 .concept-copy {
+  grid-row: auto;
+  text-align: center;
+}
+
+#s5 .concept-copy p {
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+#s5 .concept > .carousel {
+  width: min(100%, 850px);
+}
+
+.storina-page #s5 h2 {
+  margin-bottom: 24px;
+}
+
+.storina-page #s5 .concept {
+  justify-items: start;
+  gap: 24px;
+}
+
+.storina-page #s5 h2 + .concept {
+  padding-top: 0;
+}
+
+.storina-page #s5 .concept-copy {
+  text-align: left;
+}
+
+.storina-page #s5 .concept-copy .product-label {
+  margin-top: 0;
+}
+
+.storina-page #s5 .carousel-controls {
+  justify-content: flex-start;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .storina-page #s5 .slides img {
+    transition: opacity 180ms ease-out;
+  }
+
+  .storina-page #s5 .slides a:hover img {
+    opacity: .93;
+  }
+}
+
+#s5 .concept > .vulyk-video {
+  justify-self: center;
+  width: min(100%, 300px);
+}
+
+#s5 .concept > .vulyk-video video {
+  width: 100%;
+}
+
+.vulyk-page .hero,
+.storina-page .hero {
+  grid-template-columns: minmax(0, 1fr) clamp(235px, 26vw, 340px);
+}
+
+.case-cover {
+  padding: 0;
+}
+
+.case-cover img,
+.ordering-page .projects .project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.vulyk-page .case-cover img {
+  object-position: center 30%;
+}
+
+.ordering-page .projects .project-media {
+  padding: 0;
+}
+
+.ordering-page .projects .project-media img {
+  object-position: 94% center;
+  max-width: 340px;
+}
+
+.hero-logo {
+  display: inline-block;
+  width: .58em;
+  height: auto;
+  margin-inline-start: .05em;
+  vertical-align: .04em;
+}
+
+@media (max-width: 650px) {
+  .vulyk-page .hero,
+  .storina-page .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

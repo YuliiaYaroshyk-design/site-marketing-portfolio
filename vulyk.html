@@ -1,0 +1,180 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Портфоліо Юлії Ярошик. Кейс Вулика — стратегія, креативи та план тестування."><title>Вулик · Yuliia Yaroshyk</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;display=swap"><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fbfaf7;color:#161616;font:16px/1.55 'DM Sans',system-ui,sans-serif}a{color:inherit}img{display:block;width:100%;height:auto}main,header,footer{width:min(1240px,calc(100% - 48px));margin:auto}header,footer{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:12px;flex-wrap:wrap}.eyebrow,.small{font-size:12px;letter-spacing:.12em;text-transform:uppercase}.hero{display:grid;grid-template-columns:1fr 1fr;background:#c9ed72;min-height:460px;overflow:hidden}h1,h2,h3,blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.06;margin:0 0 16px}h1{font-size:clamp(58px,6.8vw,104px);line-height:1.04;letter-spacing:-.022em}h2{font-size:clamp(38px,5vw,52px);font-weight:300;letter-spacing:-.01em}h3{font-size:30px;font-weight:300;line-height:1.2;letter-spacing:-.01em}.intro{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:46px 0}.intro p{font-size:clamp(23px,4vw,42px);max-width:720px;margin:0;line-height:1.13}.button{border-radius:50px;background:#171717;color:white;text-decoration:none;display:inline-block;white-space:nowrap;padding:14px 22px}nav{display:flex;gap:9px;flex-wrap:wrap;padding:0 0 24px}nav a{border:1px solid #aaa;border-radius:25px;padding:7px 12px;font-size:13px;text-decoration:none}.chapter{padding:42px 0;border-top:1px solid #ccc;scroll-margin-top:12px}.chapter>p{max-width:760px}.scenarios,.upcoming{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}.scenario{background:#eeeade;padding:22px}.scenario:nth-child(2){background:#f5d9af}.scenario:nth-child(3){background:#e0e8d3}blockquote{font-size:22px}.slides{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(165px,24%);gap:12px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.slides>*{scroll-snap-align:start}.series{margin:24px 0}.upcoming{grid-template-columns:repeat(2,minmax(0,1fr))}.upcoming img{aspect-ratio:3/2;object-fit:cover;margin-bottom:14px}details{border-top:1px solid #ccc;padding-top:12px}summary{cursor:pointer}.refs a{margin-right:12px}footer{border-top:1px solid #ccc}@media(max-width:650px){main,header,footer{width:calc(100% - 24px)}.hero{grid-template-columns:1fr;min-height:0}.intro{align-items:flex-start;flex-direction:column}.scenarios,.upcoming{grid-template-columns:1fr}.slides{grid-auto-columns:72%}}.product-label{display:inline-block;margin-top:8px;padding:3px 9px;border:1px solid #6a785e;border-radius:99px;color:#34432b;font-size:12px;line-height:1.4}
+.case-header .case-brand{font:400 25px/1.15 'Cormorant Garamond',Georgia,serif;text-decoration:none;letter-spacing:.015em}
+.case-header .case-back{font:400 14px/1.3 'DM Sans',system-ui,sans-serif;text-decoration:none}
+.case-header a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero{background:#486139;color:#fff;grid-template-columns:1fr 1fr;align-items:center;min-height:0}
+.hero .hero-copy{align-self:center;text-align:left;padding:clamp(24px,5vw,66px)}
+.hero-copy h1{margin:7px 0 0}
+.hero-copy p{margin:8px 0 12px;max-width:36ch}
+.hero .product-label{color:#fff;border-color:#ffffffa0;margin:0}
+.hero .button{display:table;margin-top:24px;background:#fff;color:#34452b}
+.hero .button:hover{background:#edf1e7}
+
+.hypothesis{max-width:760px;background:#e7eddf;border-left:4px solid #486139;padding:clamp(18px,3vw,30px);margin:24px 0}
+.hypothesis h3{font-weight:600;margin:0 0 8px}
+.hypothesis p{margin:0}.hypothesis p+p{margin-top:14px}
+.scenario{display:flex;flex-direction:column;padding:24px;gap:12px}
+.scenario h3{font-weight:600;margin:0}
+.scenario blockquote,.scenario p{margin:0}
+.scenario .scenario-cta{display:grid;gap:4px;margin-top:auto;border-top:1px solid #48613955;padding-top:12px;font-weight:600}
+.scenario-cta strong{font-size:11px;letter-spacing:.12em}
+.concept{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(22px,4vw,56px);align-items:center;padding:24px 0;border-bottom:1px solid #dad9d2}
+.concept-copy h3{font-weight:600;margin:6px 0 8px}
+.concept-copy p{margin:0;max-width:48ch}
+.carousel{min-width:0}
+.carousel .slides{--card-gap:12px;display:flex;gap:var(--card-gap);padding:0;overflow:auto;scrollbar-width:none;scroll-snap-type:x mandatory}
+.carousel .slides::-webkit-scrollbar{display:none}
+.carousel .slides a{flex:0 0 calc((100% - 2 * var(--card-gap)) / 3);min-width:0;aspect-ratio:4/5;display:grid;place-items:center;background:#eeece5;scroll-snap-align:start}
+.carousel .slides a:focus-visible{outline:2px solid #34452b;outline-offset:-3px}
+.carousel .slides img{width:100%;height:100%;max-height:100%;object-fit:contain}
+.carousel-controls{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:9px}
+.carousel-controls button{width:38px;height:38px;border-radius:50%;border:1px solid #a7ad9e;background:transparent;color:#303b2b;font-size:18px;cursor:pointer}
+.carousel-controls button:hover:not(:disabled){background:#e7eddf}.carousel-controls button:disabled{opacity:.35;cursor:default}
+.carousel-controls output{min-width:42px;text-align:center;font-variant-numeric:tabular-nums;font-size:13px}
+@media(max-width:900px){.carousel .slides a{flex-basis:calc((100% - var(--card-gap)) / 2)}}
+@media(max-width:650px){.hero,.concept{grid-template-columns:1fr}.concept-copy{grid-row:1}.carousel .slides a{flex-basis:86%}}
+
+.hero + nav[aria-label="Розділи кейсу"]{margin-block-start:clamp(20px,3vw,32px)}
+.eyebrow{color:#56584e}
+.hero .eyebrow{color:#dedfd9}
+
+.metrics-heading{margin:28px 0 12px}
+.metrics-list{display:grid;gap:0;max-width:760px;padding:0;margin:0 0 24px;list-style:none}
+.metrics-list li{padding:14px 16px;border-bottom:1px solid #d8d8cd}
+.metrics-list p{margin:4px 0 0}
+.metrics-list .metrics-primary{background:#e7e9de}
+.metrics-tag{display:inline-block;margin:0 0 0 6px;padding:2px 7px;border:1px solid #818875;color:#46513d;font-size:12px;line-height:1.4}
+.product-label:has(.ukraine-flag){display:inline-flex;align-items:center;gap:6px}
+.ukraine-flag{display:inline-block;flex:none;width:16px;aspect-ratio:3/2;background:linear-gradient(to bottom,#0057b7 50%,#ffd700 50%);box-shadow:0 0 0 1px #0002}
+
+.hero .eyebrow{margin-bottom:12px}
+.hero-photos{display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:center;padding:clamp(20px,3vw,40px) clamp(20px,3vw,40px) clamp(20px,3vw,40px) 0}
+.hero-photos-pair{display:grid;gap:12px}
+.hero-photos img{display:block;width:100%;height:auto;border:4px solid #fbfaf7;box-shadow:0 5px 14px #1b271b40}
+@media(max-width:650px){.hero-photos{padding:0 clamp(24px,5vw,66px) 24px}}
+
+.hero{background:#344f3d}
+.hero .button{border-radius:0}
+.vulyk-hero-image{display:grid;place-items:center;padding:clamp(18px,3vw,34px)}
+.vulyk-hero-image img{width:min(100%,300px);height:auto}
+.vulyk-video{margin:0}
+.vulyk-video video{display:block;width:min(100%,300px);height:auto;aspect-ratio:9/16;background:#161616}
+.scenarios{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:650px){.scenarios{grid-template-columns:1fr}.vulyk-hero-image{padding-top:0}.vulyk-video{justify-self:center}}
+</style><link rel="stylesheet" href="assets/portfolio-components.css"></head><body class="vulyk-page">
+<header class="case-header"><a class="case-brand" href="index.html">Yuliia Yaroshyk</a><a class="case-back" href="index.html#more">← Усі проєкти</a></header>
+<main>
+  <div class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">02 / Pet project</div>
+      <span class="product-label"><span class="ukraine-flag" aria-hidden="true"></span>Український продукт</span>
+      <h1>Вулик <img class="hero-logo" src="assets/vulyk/bee.svg" alt="" width="28" height="24"></h1>
+      <p>Продиктуй робочі й особисті справи одним записом. Вулик розділить їх на задачі й запропонує пріоритети, які можна змінити.</p>
+      <a class="button" href="https://ai-planner-orcin.vercel.app/">Спробувати Вулик ↗</a>
+    </div>
+    <div class="case-cover"><img src="assets/vulyk/05-vulyk.png" alt="Героїня з кавою показує Вулик на телефоні" width="941" height="1672"></div>
+  </div>
+  <nav aria-label="Розділи кейсу">
+    <a href="#s1">01 Product &amp; Challenge</a><a href="#s2">02 Audience Research</a><a href="#s3">03 Competitor Research</a><a href="#s4">04 Creative Strategy</a><a href="#s5">05 AI Creative Production</a><a href="#s6">06 Testing Strategy</a><a href="#s7">07 Learnings</a>
+  </nav>
+  <section id="s1" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 01</div><h2>Product &amp; Challenge</h2>
+    <p>Вулик — голосовий планер, який перетворює одну фразу на окремі задачі. Робочі й особисті справи згадуються протягом дня. Частина лишається в нотатках, частина — на стікерах, а деякі доводиться тримати в голові. Мета кампанії — показати, як зібрати ці справи голосом і створити перший список у Вулику.</p>
+  </section>
+  <section id="s2" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 02</div><h2>Audience Research</h2>
+    <p>Вулик орієнтований на зайнятих україномовних людей від 25 років із завантаженим графіком і високим рівнем відповідальності. Вони ведуть власний бізнес або відповідають за робочі проєкти, поєднують це з особистими справами й знаходять час для хобі.</p>
+    <p>Робочі й особисті справи часто згадуються раптово, посеред іншого заняття. У цей момент важливо швидко зафіксувати те, що спало на думку. До пріоритетів можна повернутися пізніше.</p>
+  </section>
+  <section id="s3" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 03</div><h2>Competitor Research</h2>
+    <p>Todoist Ramble і TickTick AI Voice Add уже розділяють голосовий запис на задачі й розпізнають дати та пріоритети. Motion допомагає розмістити задачі в календарі. Для Вулика я обрала сценарій із повсякденного життя: людина говорить українською у своєму темпі й отримує список справ, який може переглянути й скоригувати.</p>
+    <p class="refs"><a href="https://www.todoist.com/help/todoist/todoist-and-ai/dictate-to-add-tasks-with-ramble-P1Raq7vVF">Todoist Ramble ↗</a> <a href="https://help.ticktick.com/articles/7082552170989486080">TickTick AI Voice Add ↗</a> <a href="https://www.usemotion.com/help/time-management/auto-scheduling">Motion ↗</a></p>
+  </section>
+  <section id="s4" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 04</div><h2>Creative Strategy</h2>
+    <p>Я побудувала кампанію навколо моменту, коли людина раптово згадує про справу. Карусель «Розкидані справи» показує, як такі задачі накопичуються в різних місцях. Анімація «Одна фраза. Дві задачі.» демонструє, як зібрати їх голосом в одному списку.</p>
+    <p>Людина говорить так, як їй зручно. Вулик виділяє окремі задачі й за їхнім змістом пропонує пріоритети, які можна скоригувати. Обидва креативи ведуть до першого кроку — продиктувати власні справи у Вулику.</p>
+  </section>
+  <section id="s5" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 05</div><h2>AI Creative Production</h2>
+    <article class="concept">
+      <div class="concept-copy"><div class="eyebrow">Карусель · 5 слайдів</div><h3>Розкидані справи</h3><p>Квитки для мами, квартальний звіт і дашборд продажів з’являються на стікерах у трьох різних місцях. Фінальні слайди збирають записки разом і показують Вулик у руці героїні.</p></div>
+      <div class="carousel" role="group" aria-label="Карусель «Розкидані справи»">
+        <div class="slides" tabindex="0" aria-label="Слайди каруселі">
+          <a href="assets/vulyk/01-cafe.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/vulyk/01-cafe.png" alt="Записка у квітах: купити квитки в кіно на подарунок мамі"></a>
+          <a href="assets/vulyk/02-dresser.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/vulyk/02-dresser.png" alt="Записка в комоді: відправити квартальний звіт бухгалтеру"></a>
+          <a href="assets/vulyk/03-street.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/vulyk/03-street.png" alt="Записка на асфальті: зробити дашборд продажів для аналітики"></a>
+          <a href="assets/vulyk/04-message.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/vulyk/04-message.png" alt="Розкидані справи в житті? Збери все разом з планером!"></a>
+          <a href="assets/vulyk/05-vulyk.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/vulyk/05-vulyk.png" alt="Героїня на веранді кав’ярні з телефоном і відкритим Вуликом"></a>
+        </div>
+        <div class="carousel-controls"><button type="button" data-step="-1" aria-label="Попередній слайд" disabled>←</button><output aria-live="polite">1 / 5</output><button type="button" data-step="1" aria-label="Наступний слайд">→</button></div>
+      </div>
+    </article>
+    <article class="concept">
+      <div class="concept-copy"><div class="eyebrow">Stories &amp; Reels · 9 с</div><h3>Одна фраза. Дві задачі.</h3><p>Оригінальна бджілка Вулика супроводжує голосовий запис. Дві задачі з’являються у вкладках «Сьогодні» й «Завтра» у спрощеному макеті інтерфейсу.</p></div>
+      <figure class="vulyk-video"><video controls playsinline preload="none" poster="assets/vulyk/voice-poster.png" width="1080" height="1920" aria-label="Анімація «Одна фраза. Дві задачі.»"><source src="assets/vulyk/voice-animation.mp4" type="video/mp4"></video></figure>
+    </article>
+  </section>
+  <section id="s6" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 06</div><h2>Testing Strategy</h2>
+    <p>Спочатку перевірю, чи після перегляду люди розуміють, як створити список голосом. Для тесту рекламного вступу порівняю знайому ситуацію «Точно десь записала. Але де?» з прямою пропозицією «Додай кілька справ одним записом». Демонстрація продукту й заклик до дії будуть однаковими.</p>
+    <h3 class="metrics-heading">Метрики</h3>
+    <ul class="metrics-list">
+      <li><strong>CTR посилання</strong><p>Частка показів, які привели до кліку за посиланням.</p></li>
+      <li><strong>Відвідування продукту</strong><p>Кількість унікальних відвідувачів із кожного креативу.</p></li>
+      <li><strong>Конверсія в реєстрацію</strong><p>Частка відвідувачів, які завершили реєстрацію.</p></li>
+      <li class="metrics-primary"><strong>Перша задача з голосового запису</strong> <span class="metrics-tag">Основна метрика</span><p>Частка відвідувачів із кожного креативу, які зберегли хоча б одну задачу з першого голосового запису.</p></li>
+    </ul>
+    <p class="small">Результати кампанії ще не зібрано.</p>
+  </section>
+  <section id="s7" class="chapter">
+    <div class="eyebrow">FIELD NOTES / 07</div><h2>Learnings</h2>
+    <p>Карусель показує, де губляться справи. Анімація показує, що відбувається після натискання на мікрофон. Перед запуском перевірю, чи глядачі розуміють, як створити список голосом, і чи аналітика фіксує перехід та збереження першої задачі.</p>
+  </section>
+</main>
+<footer><b>Yuliia Yaroshyk</b><a href="#">На початок ↑</a></footer>
+<script>
+for (const carousel of document.querySelectorAll('.carousel')) {
+  const slides = carousel.querySelector('.slides');
+  const [previous, next] = carousel.querySelectorAll('button');
+  const output = carousel.querySelector('output');
+  const cards = Array.from(slides.children);
+  const count = cards.length;
+  const maxScroll = () => Math.max(0, slides.scrollWidth - slides.clientWidth);
+  const update = () => {
+    const viewport = slides.getBoundingClientRect();
+    const visible = cards.flatMap((card, index) => {
+      const bounds = card.getBoundingClientRect();
+      return bounds.left >= viewport.left - 1 && bounds.right <= viewport.right + 1
+        ? [index + 1] : [];
+    });
+    if (visible.length) {
+      const first = visible[0];
+      const last = visible.at(-1);
+      const label = first === last ? String(first) : `${first}–${last}`;
+      const value = `${label} / ${count}`;
+      if (output.value !== value) output.value = value;
+    }
+    previous.disabled = slides.scrollLeft <= 1;
+    next.disabled = slides.scrollLeft >= maxScroll() - 1;
+  };
+  const move = (step) => {
+    if (count < 2) return;
+    const distance = cards[1].offsetLeft - cards[0].offsetLeft;
+    const left = Math.max(0, Math.min(maxScroll(), slides.scrollLeft + step * distance));
+    const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+    slides.scrollTo({left, behavior});
+  };
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  slides.addEventListener('scroll', update, {passive: true});
+  slides.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    move(event.key === 'ArrowLeft' ? -1 : 1);
+  });
+  new ResizeObserver(update).observe(slides);
+  update();
+}
+</script></body></html>
