@@ -451,13 +451,24 @@ body > footer {
 
 .creative-feed-stepped {
   display: block;
+  position: relative;
   width: min(100%, var(--creative-width));
   padding-bottom: 0;
 }
 
+.creative-feed-stepped > .creative-step-leaving {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.creative-feed-stepped > a {
+  position: relative;
+}
+
 .creative-feed-stepped > a:not([hidden]) {
   display: block;
-  position: relative;
 }
 
 .creative-motion {
@@ -548,6 +559,42 @@ body > footer {
 
 .creative-feed-nav button:disabled {
   opacity: .45;
+}
+
+:is(.creative-steps-nav, .creative-feed-nav) button {
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 120ms ease;
+}
+
+@media (hover: hover) {
+  :is(.creative-steps-nav, .creative-feed-nav) button:not(:disabled):hover {
+    background: #486139;
+    border-color: #486139;
+    color: #fff;
+  }
+}
+
+:is(.creative-steps-nav, .creative-feed-nav) button:focus-visible {
+  outline: 2px solid #486139;
+  outline-offset: 3px;
+}
+
+:is(.creative-steps-nav, .creative-feed-nav) button:not(:disabled):active {
+  background: #34482b;
+  border-color: #34482b;
+  color: #fff;
+  transform: scale(.9);
+}
+
+:is(.creative-steps-nav, .creative-feed-nav) button:disabled {
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.creative-steps-nav, .creative-feed-nav) button {
+    transition: none;
+    transform: none !important;
+  }
 }
 
 .creative-count {

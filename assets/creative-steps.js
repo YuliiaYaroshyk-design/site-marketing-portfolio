@@ -9,7 +9,8 @@ for (const feed of document.querySelectorAll('[data-creative-steps]')) {
   let current = 0;
   let requested = 0;
   let transition;
-  const instantTransition = feed.hasAttribute('data-instant-transition');
+  let leavingCard;
+  const predecode = feed.hasAttribute('data-predecode');
 
   const restart = feed.hasAttribute('data-restart');
   const forwardLabel = next.getAttribute('aria-label');
@@ -17,15 +18,37 @@ for (const feed of document.querySelectorAll('[data-creative-steps]')) {
 
   for (const video of feed.querySelectorAll('video')) video.loop = false;
 
-  function showStep(index, play = false) {
-    const direction = Math.sign(index - current);
+  function finishTransition() {
     transition?.cancel();
+    if (!leavingCard) return;
+    leavingCard.hidden = true;
+    leavingCard.inert = false;
+    leavingCard.classList.remove('creative-step-leaving', 'creative-motion-playing');
+    leavingCard = null;
+  }
+
+  function showStep(index, play = false) {
+    const crossfade = index !== current && play && !stepReducedMotion.matches;
+    finishTransition();
     const outgoing = cards[current];
     outgoing.querySelector('video')?.pause();
-    outgoing.classList.remove('creative-motion-playing');
     current = index;
 
     cards.forEach((card, position) => { card.hidden = position !== index; });
+    if (crossfade) {
+      leavingCard = outgoing;
+      outgoing.hidden = false;
+      outgoing.inert = true;
+      outgoing.classList.add('creative-step-leaving');
+      transition = outgoing.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 280,
+        easing: 'ease-in-out',
+        fill: 'forwards',
+      });
+      transition.onfinish = finishTransition;
+    } else {
+      outgoing.classList.remove('creative-motion-playing');
+    }
     count.value = `${index + 1} / ${cards.length}`;
     previous.disabled = index === 0;
     const atEnd = index === cards.length - 1;
@@ -38,18 +61,16 @@ for (const feed of document.querySelectorAll('[data-creative-steps]')) {
     if (!play || stepReducedMotion.matches) return;
 
     const card = cards[index];
-    if (direction && !instantTransition) {
-      transition = card.animate(
-        [{ opacity: 0.35, transform: `translateX(${18 * direction}px)` },
-         { opacity: 1, transform: 'translateX(0)' }],
-        { duration: 240, easing: 'ease-out' },
-      );
-    }
-
     const video = card.querySelector('video');
     if (video) {
       video.currentTime = 0;
-      void video.play().catch(() => {});
+      if (crossfade) {
+        void transition.finished.then(() => {
+          if (cards[current] === card && !stepReducedMotion.matches) return video.play();
+        }).catch(() => {});
+      } else {
+        void video.play().catch(() => {});
+      }
     }
 
     const layers = card.querySelectorAll('.creative-motion img');
@@ -68,17 +89,19 @@ for (const feed of document.querySelectorAll('[data-creative-steps]')) {
     requested = index;
     if (index === current) return;
 
-    if (!instantTransition) {
+    if (!predecode) {
       showStep(index, true);
       return;
     }
 
-    const image = cards[index].querySelector('img');
+    const video = cards[index].querySelector('video');
+    const image = video ? new Image() : cards[index].querySelector('img');
+    if (video) image.src = video.poster;
     image.loading = 'eager';
     try {
       await image.decode();
     } catch {
-      const source = image.parentElement.querySelector('source');
+      const source = image.parentElement?.querySelector('source');
       if (source) {
         source.remove();
         try {
